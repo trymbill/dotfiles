@@ -1,6 +1,17 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+# JAVA GLOBALS
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7*)
+export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8"
+
+# MAVEN
+export M2_HOME=/opt/local/share/java/maven3
+launchctl setenv M2_HOME $M2_HOME
+
+# EXTRAS IN PATH
+export PATH="/bin:/usr/bin:/usr/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Library/PostgreSQL/9.3/bin:$M2_HOME/bin:$PATH"
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -52,3 +63,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # init z   https://github.com/rupa/z
 source ./bin/z.sh
+
+# Load RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
