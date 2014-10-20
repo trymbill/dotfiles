@@ -1,8 +1,10 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+export PACKAGE_DIRS="/Volumes/DUPER/LocalProjects/meteor-local-packages"
+
 # JAVA GLOBALS
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7*)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.7*)
 export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8"
 
 # MAVEN
